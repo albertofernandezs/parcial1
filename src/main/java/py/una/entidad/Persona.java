@@ -4,29 +4,30 @@ import java.util.List;
 
 public class Persona {
 
-	Long cedula;
+	int cedula;
 	String nombre;
 	String apellido;
-	
-	List<String> asignaturas;
+	String chapa;
+	String marca;
 	
 	public Persona(){
-		asignaturas = new ArrayList<String>();
+		
 	}
 
-	public Persona(Long pcedula, String pnombre, String papellido){
+	public Persona(int pcedula, String pnombre, String papellido, String chapa, String marca){
 		this.cedula = pcedula;
 		this.nombre = pnombre;
 		this.apellido = papellido;
+		this.chapa=chapa;
+		this.marca=marca;
 		
-		asignaturas = new ArrayList<String>();
 	}
 	
-	public Long getCedula() {
+	public int getCedula() {
 		return cedula;
 	}
 
-	public void setCedula(Long cedula) {
+	public void setCedula(int cedula) {
 		this.cedula = cedula;
 	}
 
@@ -46,11 +47,22 @@ public class Persona {
 		this.apellido = apellido;
 	}
 
-	public List<String> getAsignaturas() {
-		return asignaturas;
+	public String getChapa() {
+		return chapa;
 	}
 
-	public void setAsignaturas(List<String> asignaturas) {
-		this.asignaturas = asignaturas;
+	public void setChapa(String chapa) {
+		this.chapa = chapa;
 	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+	
+
+
 }
